@@ -1,0 +1,140 @@
+\documentclass[a4paper, 11pt]{article} % A4 paper size and default 11pt font size
+
+\usepackage[margin=1.1in]{geometry}% http://ctan.org/pkg/geometry
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} 	% Output font encoding for international characters
+\usepackage{stix} 			% Use the STIX fonts
+\usepackage{parskip}        % I don't want indentation
+\usepackage{yfonts} 		% More fonts
+\usepackage{allrunes}		% Runes for the Title page
+\usepackage{tcolorbox}		% Adds Colored boxes
+\usepackage{enumitem}		% Make Listes
+\usepackage{multirow}		% Fancyer tables
+\usepackage{epigraph}		% Chapter quotes
+\usepackage{framed}			% Quotes
+\usepackage[strict]{changepage}
+\usepackage{hyperref}		% Internal referances
+\usepackage{booktabs}		% Booklist and referances
+\usepackage{longtable}		% Multi page tables
+\usepackage{tikz}			% Vertical Rune Text
+	\usetikzlibrary{calc}
+\usepackage{color, colortbl}% Custome colors
+	\definecolor{Gray}{gray}{0.9}
+	\definecolor{CadetBlue}{rgb}{0.37,0.62,0.63}
+	\definecolor{LightCyan}{rgb}{0.88,1,1}
+\usepackage{graphicx}		% Grafics and pictures
+	\graphicspath{{./images/}}
+\usepackage{censor} 		% Used to make redacted copy
+
+\newcommand\blankpage{		% Add a blank page that dosen't count to total page numbers
+    \clearpage \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \clearpage
+}
+
+%Quotations
+\setlength\epigraphwidth{12cm}
+\setlength\epigraphrule{0pt}
+
+% environment derived from framed.sty: see leftbar environment definition
+\definecolor{FormalShade}{rgb}{0.95,0.95,1}
+\definecolor{DarkBlue}{rgb}{0.0, 0.0, 0.55}
+
+\newenvironment{formal}{%
+  \def\FrameCommand{%
+    \hspace{1pt}%
+    {\color{DarkBlue}\vrule width 2pt}%
+    {\color{FormalShade}\vrule width 4pt}%
+    \colorbox{FormalShade}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+
+\newcounter{cnt} \setcounter{cnt}{0}
+
+%Helper function to set counters
+\def\inc{\stepcounter{cnt}\thecnt}
+
+%Helper fuction to set margines.
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+  \let\endchangemargin=\endlist 
+
+\begin{document}
+\StopCensoring %Add this line to create a non-Redacted version
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\begin{titlepage}
+\begin{changemargin}{-1cm}{-1cm} 
+
+\begin{minipage}[t]{500px}
+	\vspace{-60px}
+	\raggedleft 
+	\includegraphics[width=0.18\linewidth]{Kvasir.png} \\				
+	\includegraphics[width=0.18\linewidth]{Logo.png} \\
+	\textswab{Think evil, do good}~~ \\
+\end{minipage}	
+\begin{minipage}[l][10px]{20px}	
+	\tikz[remember picture, overlay]
+    \node [rotate=90.2] at ($(current page.center)+(-9,0)$) 
+    {
+	\Large
+	\underline{
+\textarc{hinkewildogoodthinkewildogoodthinkewildogoodthinkewildogoodthinkewildogoodthinkewildogoodthinkewildogoodthinkewildogoodthinkewildogoodthinkewildogood} 
+	}	
+	};
+\end{minipage}
+
+\begin{minipage}[c]{490px}
+\begin{changemargin}{5px}{5px}
+	\center
+	\Huge 
+	\textbf{MS Azure Security Technologies} %Overskrift 
+	\\
+ 	\vspace{3px}
+	\Large
+	AZ-500 Certification \\ %Underoverskrift
+	\small 
+	\censor{The Collective Conspiracy Coven of Conspicuous Insight and Contagious Brilliance}	%Tagline
+\end{changemargin}
+\end{minipage}
+
+\vspace{480px}
+\center
+Version 1.0\\ %Version
+\censor{\today} %Dato
+\end{changemargin}
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+
+% Table Of Content  %
+\pagenumbering{gobble}
+\tableofcontents
+
+% Content  %
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{scope}
+\include{content}
+
+\newpage
+\bibliography{ref}
+\bibliographystyle{IEEEtran}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\begin{appendices}
+\include{glossary}
+\end{appendices}
+
+\end{document}

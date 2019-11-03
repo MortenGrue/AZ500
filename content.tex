@@ -1,0 +1,367 @@
+\section{Certification Content}
+
+\subsection{Manage identity and access (20-25\%)}
+
+\subsubsection{Configure Microsoft Azure Active Directory for workloads}
+\begin{itemize}
+\item Create App registration \\
+Tree Supported account types:
+	\begin{itemize}
+	\item Azure AD only single-tenant -> LOB app.
+	\item Azure AD only multi-tenant -> All business and educational users.
+	\item Azure AD multi-tenant and personal Microsoft accounts -> Widest set of users.
+	\end{itemize}
+\item Configure App registration permission scopes \\
+Uses OAuth 2.0 for third parti app access.\\
+MS strongly recommends that you use Microsoft Graph. \\
+Two Permission types:
+	\begin{itemize}
+	\item Delegated permissions -> App permission $\cap$ User permission 
+	\item Application permissions -> App permission  
+	\end{itemize}
+Interesting scopes: 
+	\begin{itemize}
+	\item openid -> Required for OpenID Connect.
+	\item email -> access to the user's primary email address.
+	\item profile -> access to a substantial amount of information about the user. See \href{https://docs.microsoft.com/en-us/azure/active-directory/develop/id-tokens}{id tokens}
+	\item offline\_access -> Maintain access to data you have given it access to.
+	\end{itemize}
+\item Manage App registration permission consent 
+
+\item Configure multi-factor authentication settings 
+\item Manage Microsoft Azure AD directory groups 
+\item Manage Microsoft Azure AD users 
+\item Install and configure Microsoft Azure AD Connect 
+\item Configure authentication methods 
+\item Implement conditional access policies 
+\item Configure Microsoft Azure AD identity protection 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app}{Quickstart: Register an application with the Microsoft identity platform} & 3 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-permissions-and-consent}{Permissions and consent in the Azure Active Directory v1.0 endpoint} & 6 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent}{Permissions and consent in the Microsoft identity platform endpoint} & 18 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-mfasettings}{Configure Azure Multi-Factor Authentication settings} & 21 \\
+\href{https://docs.microsoft.com/en-us/microsoft-365/enterprise/identity-use-group-management}{Use groups for management} & 3 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-custom}{Custom installation of Azure AD Connect} & 26 \\
+\href{https://docs.microsoft.com/en-us/azure/security/fundamentals/choose-ad-authn}{Authentication method for Azure Active Directory hybrid identity solution} & 15+13 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/best-practices}{Best practices for Conditional Access in Azure Active Directory} & 6 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection}{What is Azure Active Directory Identity Protection?} & 3 \\
+\cline{2-2} 
+ & 114
+\end{tabular}
+
+\subsubsection{Configure Microsoft Azure AD Privileged Identity Management}
+\begin{itemize}
+\item monitor privileged access 
+\item configure access reviews 
+\item activate Privileged Identity Management 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-getting-started}{Start using Privileged Identity Management} & 3 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-deployment-plan}{Deploy Azure AD Privileged Identity Management (PIM)} & 26 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview}{What are Azure AD access reviews?} & 6+12 \\
+\cline{2-2} 
+ & 47 \\
+\end{tabular}
+
+\subsubsection{Configure Microsoft Azure tenant security}
+\begin{itemize}
+\item transfer Microsoft Azure subscriptions between Microsoft Azure AD tenants 
+\item manage API access to Microsoft Azure subscriptions and resources 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/billing/billing-subscription-transfer}{Transfer billing ownership of an Azure subscription to another account} & 10 \\
+\href{https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-aad}{Authorize developer accounts by using Azure Active Directory in Azure API Management} & 4 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios}{Authentication flows and application scenarios} & 10 \\
+\href{https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-graph-api}{Azure Active Directory Graph API} & 4 \\
+\cline{2-2} 
+ & 28 \\
+\end{tabular}
+
+\clearpage
+\subsection{Implement platform protection (35-40\%)}
+
+\subsubsection{Implement network security}
+\begin{itemize}
+\item configure virtual network connectivity 
+\item configure Network Security Groups (NSGs) 
+\item create and configure Microsoft Azure firewall 
+\item create and configure application security groups 
+\item configure remote access management 
+\item configure baseline 
+\item configure resource firewall 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview}{What is Azure Virtual Network?} & 5 \\
+\href{https://docs.microsoft.com/en-us/azure/virtual-network/manage-network-security-group}{Create, change, or delete a network security group} & 13 \\
+\href{https://docs.microsoft.com/en-us/azure/firewall/tutorial-firewall-deploy-portal}{Tutorial: Deploy and configure Azure Firewall using the Azure portal} & 7 \\
+\href{https://azure.microsoft.com/en-gb/blog/applicationsecuritygroups/}{Application Security Groups now generally available in all Azure regions} & 6 \\
+\href{https://docs.microsoft.com/en-us/azure/security/fundamentals/management}{Security management in Azure} & 20 \\
+\href{https://docs.microsoft.com/en-us/azure/security-center/security-center-network-recommendations}{Protect your network resources in Azure Security Center} & 9 \\
+\href{https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security}{Configure Azure Storage firewalls and virtual networks} & 17 \\
+\href{https://docs.microsoft.com/en-us/azure/sql-database/sql-database-firewall-configure}{Azure SQL Database and Azure SQL Data Warehouse IP firewall rules} & 11 \\
+\cline{2-2} 
+ & 88 \\
+\end{tabular}
+
+\subsubsection{Implement host security}
+\begin{itemize}
+\item configure endpoint security within the VM 
+\item configure VM security 
+\item harden VMs in Microsoft Azure 
+\item configure system updates for VMs in Microsoft Azure 
+\item configure baseline 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/security/fundamentals/antimalware}{Microsoft Antimalware for Azure Cloud Services and Virtual Machines} & 10 \\
+\href{https://docs.microsoft.com/en-us/azure/security/fundamentals/iaas}{Security best practices for IaaS workloads in Azure} & 12 \\
+\href{https://blogs.msdn.microsoft.com/mvpawardprogram/2018/01/09/just-in-time-access-azure-vms/}{Harden Your Azure Infrastructure Using Azure Security Center Just-In-Time VM Access} & 10 \\
+\href{https://docs.microsoft.com/en-us/azure/automation/automation-tutorial-update-management}{Manage updates and patches for your Azure VMs} & 10 \\
+\href{https://docs.microsoft.com/en-us/azure/security-center/security-center-features-retirement-july2019#menu_securityconfigurations}{Retirement of Security Center features (July 2019)} & 7 \\
+\cline{2-2} 
+ & 49 \\
+\end{tabular}
+
+\subsubsection{Configure container security}
+\begin{itemize}
+\item configure network 
+\item configure authentication 
+\item configure container isolation 
+\item configure AKS security 
+\item configure container registry 
+\item configure container instance security 
+\item implement vulnerability management 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/virtual-network/container-networking-overview}{Azure Virtual Network capabilities} & 3 \\
+\href{https://docs.microsoft.com/en-us/azure/aks/kubernetes-service-principal}{Service principals with Azure Kubernetes Service (AKS)} & 6 \\
+\href{https://azure.microsoft.com/mediahandler/files/resourcefiles/container-security-in-microsoft-azure/Open\%20Container\%20Security\%20in\%20Microsoft\%20Azure.pdf}{Container Security in Microsoft Azure} & 45 \\
+\href{https://docs.microsoft.com/en-us/azure/aks/concepts-security}{Security concepts for applications and clusters in Azure Kubernetes Service (AKS)} & 6 \\
+\href{https://docs.microsoft.com/en-us/azure/container-instances/container-instances-image-security}{Security considerations for Azure Container Instances} & 9 \\
+\cline{2-2} 
+ & 69 \\
+\end{tabular}
+
+\subsubsection{Implement Microsoft Azure Resource management security}
+\begin{itemize}
+\item create Microsoft Azure resource locks 
+\item manage resource group security 
+\item configure Microsoft Azure policies 
+\item configure custom RBAC roles 
+\item configure subscription and resource permissions 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources}{Lock resources to prevent unexpected changes} & 6 \\
+\href{https://docs.microsoft.com/en-us/azure/role-based-access-control/overview}{What is role-based access control (RBAC) for Azure resources?} & 7 \\
+\href{https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/create-and-manage}{Tutorial: Create and manage policies to enforce compliance} & 14 \\
+\href{https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles}{Custom roles for Azure resources} & 4 \\
+\href{https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal}{Manage access to Azure resources using RBAC and the Azure portal} & 6 \\
+\cline{2-2} 
+ & 37 \\
+\end{tabular}
+
+\clearpage
+\subsection{Manage security operations (15-20\%)}
+
+\subsubsection{Configure security services}
+\begin{itemize}
+\item configure Microsoft Azure monitor 
+\item configure Microsoft Azure log analytics 
+\item configure diagnostic logging and log retention 
+\item configure vulnerability scanning 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/azure-monitor/azure-management}{Azure Management - Monitoring} & 3 \\
+\href{https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access}{Manage access to log data and workspaces in Azure Monitor} & 10 \\
+\href{https://docs.microsoft.com/en-us/azure/azure-monitor/platform/resource-logs-overview}{Azure Resource logs overview} & 2 \\
+\href{https://docs.microsoft.com/en-us/azure/security-center/security-center-vulnerability-assessment-recommendations}{Vulnerability assessment in Azure Security Center} & 4 \\
+\cline{2-2} 
+ & 19 \\
+\end{tabular}
+
+\subsubsection{Configure security policies}
+\begin{itemize}
+\item configure centralized policy management by using Microsoft Azure Security Center 
+\item configure Just in Time VM access by using Microsoft Azure Security Center 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/security-center/tutorial-security-policy}{Working with security policies} & 9 \\
+\href{https://docs.microsoft.com/en-us/azure/security-center/security-center-just-in-time}{Manage virtual machine access using just-in-time} & 11 \\
+\cline{2-2} 
+ & 20 \\
+\end{tabular}
+
+\subsubsection{Manage security alerts}
+\begin{itemize}
+\item create and customize alerts 
+\item review and respond to alerts and recommendations 
+\item configure a playbook for a security event by using Microsoft Azure Security Center 
+\item investigate escalated security incidents 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/security-center/security-center-managing-and-responding-alerts}{Manage and respond to security alerts in Azure Security Center} & 2 \\
+\href{https://docs.microsoft.com/en-us/azure/security-center/security-center-recommendations}{Security recommendations in Azure Security Center} & 2 \\
+\href{https://docs.microsoft.com/en-us/azure/security-center/security-center-playbooks}{Security Playbook in Azure Security Center (Preview)} & 3 \\
+\href{https://docs.microsoft.com/en-us/azure/security-center/security-center-features-retirement-july2019#menu_investigate}{Security alerts investigation} & 5 \\
+\cline{2-2} 
+ & 12 \\
+\end{tabular}
+
+\clearpage
+\subsection{Secure data and applications (30-35\%)}
+\subsubsection{Configure security policies to manage data}
+\begin{itemize}
+\item configure data classification 
+\item configure data retention 
+\item configure data sovereignty 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/information-protection/infoprotect-settings-tutorial}{Tutorial: Configure Azure Information Protection policy settings that work together} & 8 \\
+\href{https://docs.microsoft.com/en-us/rest/api/storageservices/setting-a-storage-analytics-data-retention-policy}{Setting a Storage Analytics data retention policy} & 2 \\
+\href{https://docs.microsoft.com/en-us/azure/kusto/management/retention-policy}{Retention policy} & 2 \\
+\href{https://docs.microsoft.com/en-us/azure/governance/policy/samples/allowed-locations}{Sample - Allowed region locations} & 5 \\
+\cline{2-2} 
+ & 17 \\
+\end{tabular}
+
+\subsubsection{Configure security for data infrastructure}
+\begin{itemize}
+\item enable database authentication 
+\item enable database auditing 
+\item configure Microsoft Azure SQL Database threat detection 
+\item configure access control for storage accounts 
+\item configure key management for storage accounts 
+\item create and manage Shared Access Signatures (SAS) 
+\item configure security 
+	\begin{itemize}
+		\item HDInsights
+		\item Cosmos DB
+		\item Microsoft Azure Data Lake
+	\end{itemize} 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication}{Use Azure Active Directory Authentication for authentication with SQL} & 9 \\
+\href{https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing}{Get started with SQL database auditing} & 12 \\
+\href{https://docs.microsoft.com/en-us/azure/sql-database/sql-database-threat-detection}{Azure SQL Database Advanced Threat Protection for single or pooled databases} & 2 \\
+\href{https://docs.microsoft.com/en-us/azure/storage/common/storage-security-guide}{Azure Storage security guide} & 44 \\
+\href{https://docs.microsoft.com/en-us/azure/storage/common/storage-encryption-keys-portal}{Configure customer-managed keys for Azure Storage encryption from the Azure portal} & 2 \\
+\href{https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview}{Grant limited access to Azure Storage resources using shared access signatures (SAS)} & 11 \\
+\href{https://docs.microsoft.com/en-us/azure/hdinsight/domain-joined/apache-domain-joined-configure-using-azure-adds}{Enterprise Security Package configurations with Azure Active Directory Domain Services in HDInsight} & 7 \\
+\href{https://docs.microsoft.com/en-us/azure/cosmos-db/database-security}{Security in Azure Cosmos DB - overview} & 7 \\
+\href{https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-network-security}{Virtual network integration for Azure Data Lake Storage Gen1} & 6 \\
+\cline{2-2} 
+ & 100 \\
+\end{tabular}
+
+\subsubsection{Configure encryption for data at rest}
+\begin{itemize}
+\item implement Microsoft Azure SQL Database Always Encrypted
+\item implement encryption 
+	\begin{itemize}
+		\item database
+		\item Storage Service
+		\item disk
+		\item backup
+	\end{itemize}
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted}{Always Encrypted: Protect sensitive data and store encryption keys in the Windows certificate store} & 12 \\
+\href{https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-2017}{Transparent Data Encryption (TDE)} & 11 \\
+\href{https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption}{Azure Storage encryption for data at rest} & 8 \\
+\href{https://docs.microsoft.com/en-us/azure/security/fundamentals/azure-disk-encryption-vms-vmss}{Azure Disk Encryption for virtual machines and virtual machine scale sets} & 2 \\
+\href{https://docs.microsoft.com/en-us/azure/backup/backup-azure-backup-faq#encryption}{Azure Backup - Frequently asked questions} & 8 \\
+\cline{2-2} 
+ & 41 \\
+\end{tabular}
+
+\subsubsection{Implement security for application delivery}
+\begin{itemize}
+\item implement security validations for application development 
+\item configure synthetic security transactions 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/security/security-paas-deployments}{Securing PaaS deployments} & 12 \\
+\href{https://docs.microsoft.com/en-us/azure/azure-monitor/app/transaction-diagnostics
+}{Unified cross-component transaction diagnostics} & 4 \\
+\cline{2-2} 
+ & 16 \\
+\end{tabular}
+
+\subsubsection{Configure application security}
+\begin{itemize}
+\item configure SSL/TLS certs 
+\item configure Microsoft Azure services to protect web apps 
+\item create an application security baseline 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-ssl}{Tutorial: Upload and bind SSL certificates to Azure App Service} & 9 \\
+\href{https://docs.microsoft.com/en-us/azure/application-gateway/create-web-app}{Configure App Service with Application Gateway} & 5 \\
+\href{https://docs.microsoft.com/en-us/azure/security/fundamentals/paas-deployments}{Securing PaaS deployments} & 12 \\
+\cline{2-2} 
+ & 26 \\
+\end{tabular}
+
+\subsubsection{Configure and manage Key Vault}
+\begin{itemize}
+\item manage access to Key Vault 
+\item manage permissions to secrets, certificates, and keys 
+\item manage certificates 
+\item manage secrets 
+\item configure key rotation 
+\end{itemize}
+
+\begin{tabular}{p{14cm} | r}
+\textbf{Literature} & \\
+\hline
+\href{https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault}{Secure access to a key vault} & 13 \\
+\href{https://docs.microsoft.com/en-us/azure/key-vault/about-keys-secrets-and-certificates}{About keys, secrets, and certificates} & 26 \\
+\href{https://docs.microsoft.com/en-us/azure/key-vault/key-vault-key-rotation-log-monitoring
+}{Set up Azure Key Vault with key rotation and auditing} & 14 \\
+\cline{2-2} 
+ & 53 \\
+\end{tabular}
