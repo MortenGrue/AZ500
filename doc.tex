@@ -68,9 +68,20 @@
 %Helper function to set counters
 \def\inc{\stepcounter{cnt}\thecnt}
 
-%Helper fuction to set margines.
+%Helper fuction to set margines
 \def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
   \let\endchangemargin=\endlist 
+
+%Lists boxes
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\correct}{\rlap{$\square$}{\raisebox{0.5pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\incorrect}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
 
 \begin{document}
 \StopCensoring %Add this line to create a non-Redacted version
@@ -140,6 +151,9 @@ Version 1.0\\ %Version
 \setcounter{page}{1}
 \begin{appendices}
 \include{glossary}
+\include{notes}
+\include{quiz}
+\include{quiz-answers}
 \end{appendices}
 
 \end{document}
