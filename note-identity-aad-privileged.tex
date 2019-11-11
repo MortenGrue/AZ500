@@ -122,4 +122,26 @@ Each administrator or user who interacts with or receives a benefit from Privile
 \item Only \textit{organizational} accounts, with Global Administrator role, can enable Privileged Identity Management for a directory
 \end{enumerate}
 
+\subsubsection{Azure Active Directory Graph API}
+In the process of deprecation in favor of Microsoft Graph API. \\
+Applications can use Azure AD Graph API to perform create, read, update, and delete (CRUD) operations on directory data and objects.
+\begin{enumerate}
+\item Create a new user in a directory
+\item Get a user’s detailed properties, such as their groups
+\item Update a user’s properties, such as their location and phone number, or change their password
+\item Check a user’s group membership for role-based access
+\item Disable a user’s account or delete it entirely
+\end{enumerate}
+Additionally, you can perform similar operations on other objects such as groups and applications.
+
+\textbf{Features} 
+\begin{enumerate}
+\item REST API Endpoints.
+\item Authentication with Azure AD.
+\item Role-Based Authorization (RBAC). \textit{Security groups are used to perform RBAC in Azure AD Graph API. For example, if you want to determine whether a user has access to a specific resource.}
+\item Differential Query. \textit{Differential query allows you to track changes in a directory between two time periods without having to make frequent queries to Azure AD Graph API.}
+\item Directory Extensions. \textit{You can add custom properties to directory objects without requiring an external data store.}
+\item Secured by permission scopes. \textit{Delegated and application.}
+\end{enumerate}
+
 \subsubsection{Access review}

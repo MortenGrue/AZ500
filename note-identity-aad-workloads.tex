@@ -1,5 +1,5 @@
 % This section contains notes on "Configure Microsoft Azure Active Directory for workloads" relevant subjects %
-\subsubsection{Application management}
+\subsubsection{Application management : authorisation}
 \begin{figure}[!h]
 \includegraphics[width=1\textwidth]{microsoft-identity-platform.jpg}
 \caption{Microsoft identity platform}
@@ -27,6 +27,40 @@ Applications in Azure AD rely on consent in order to gain access to necessary re
 \item Preview versions of MSAL libraries have the same level of support as production versions of MSAL and ADAL.
 \item Microsoft identity platform (v2.0) endpoint is now OIDC certified
 \end{enumerate}
+
+\subsubsection{Application management : authentication}
+The Microsoft identity platform (v2.0) endpoint supports authentication for different kinds of modern application architectures based on either the OAuth 2.0 or OpenID Connect protocols. \\
+\textbf{Supported platforms and languages} \\
+\begin{enumerate}
+\item JavaScript
+\item .NET Framework
+\item .NET Core
+\item Windows 10/UWP
+\item Xamarin.iOS
+\item Xamarin.Android
+\item Native iOS
+\item macOS
+\item Native Android
+\item Java
+\item Python
+\end{enumerate}
+Note that some application types aren't available on every platform. \\
+\begin{table}[!h]\footnotesize \begin{tabular}{p{2.6cm} p{1.6cm} p{2cm} p{2cm} p{2cm} p{1.5cm} p{1.5cm}}
+Scenario & Windows & Linux & Mac & iOS & Android \\
+Single-page app & MSAL.js & MSAL.js & MSAL.js & MSAL.js & MSAL.js \\
+Web App, users & ASP.NET Core & ASP.NET Core & ASP.NET Core & & \\
+Web App, web APIs & ASP.NET Core + MSAL.NET & ASP.NET Core + MSAL.NET  & ASP.NET Core + MSAL.NET & & \\
+ & MSAL Java & MSAL Java & MSAL Java & & \\
+ & Flask + MSAL Python & Flask + MSAL Python & Flask + MSAL Python & & \\
+Desktop app & & MSAL.NET & MSAL.NET & MSAL.NET & & \\
+ & MSAL Java & MSAL Java & MSAL Java & & \\
+ & MSAL Python & MSAL Python & MSAL Python & & \\
+ & & & MSAL.objc & & \\
+Mobile app & MSAL.NET & & & MSAL.objc & MSAL.Android \\ 
+Daemon app & MSAL.NET & MSAL.NET & MSAL.NET & & \\
+ & MSAL Java & MSAL Java & MSAL Java & & \\
+ & MSAL Python & MSAL Python & MSAL Python & & \\
+\end{tabular}\end{table}
 
 \subsubsection{User management}
 When using groups for managing the following methods should be considered:
