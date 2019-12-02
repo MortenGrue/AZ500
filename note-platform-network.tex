@@ -23,7 +23,7 @@ The communication options for on-premise resources are:
 \begin{itemize}
 \item Point-to-site virtual private network (VPN): \textit{Established between a virtual network and a single computer in your network. Each computer must configure an individual connection. Intended for developers, as it requires few adjustments to existing network. The communication is encrypted.}
 \item Site-to-site VPN: \textit{Established between on-premises VPN device and an Azure VPN Gateway in a virtual network. This connection type enables any on-premises resource that you authorize to access a virtual network. The communication is encrypted.}
-\item Azure ExpressRoute: \textit{Established between your network and Azure, through an ExpressRoute partner. This connection is private. Traffic does not go over the internet.}
+\item Azure ExpressRoute: \textit{Established between your network and Azure, through an ExpressRoute partner. This connection is private. Traffic does not go over the internet.} This is not encrypted by default.
 \end{itemize}
 
 You can filter network traffic between subnets using either or both of the following options:
