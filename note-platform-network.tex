@@ -23,11 +23,7 @@ The communication options for on-premise resources are:
 \begin{itemize}
 \item Point-to-site virtual private network (VPN): \textit{Established between a virtual network and a single computer in your network. Each computer must configure an individual connection. Intended for developers, as it requires few adjustments to existing network. The communication is encrypted.}
 \item Site-to-site VPN: \textit{Established between on-premises VPN device and an Azure VPN Gateway in a virtual network. This connection type enables any on-premises resource that you authorize to access a virtual network. The communication is encrypted.}
-<<<<<<< HEAD
-\item Azure ExpressRoute: \textit{Established between your network and Azure, through an ExpressRoute partner. This connection is private. Traffic does not go over the internet.}
-=======
 \item Azure ExpressRoute: \textit{Established between your network and Azure, through an ExpressRoute partner. This connection is private. Traffic does not go over the internet.} This is not encrypted by default.
->>>>>>> 728182d4551be8fca7f552b0874ef019cc3f6d12
 \end{itemize}
 
 You can filter network traffic between subnets using either or both of the following options:
@@ -50,7 +46,6 @@ A network security group (NSG) contains a list of security rules that allow or d
 \begin{figure}[!h]
 \includegraphics[width=1\textwidth]{platform-network-rules.png}
 \caption{List of inbound security rules}
-<<<<<<< HEAD
 \end{figure}
 
 
@@ -163,6 +158,3 @@ You can grant access to Azure services that operate from within a VNet by allowi
 \begin{tabular}{c c p{6cm}}
 
 \end{tabular}
-=======
-\end{figure}
->>>>>>> 728182d4551be8fca7f552b0874ef019cc3f6d12
